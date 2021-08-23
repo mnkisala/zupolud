@@ -110,65 +110,68 @@ const scenes = {
   },
   POHL: {
     description: `
-Chcesz spytac sie Gejba o
-Half - Life 3, ale ten ucieka
-do stanow pozrywac bananow,
-  i nie wiesz co ze sobom zrobic.
-Nagle stwierdzasz ze chcesz byc
-nekromantom, wienc zostajesz
-nekromantom 3 poziomu, ale
-to nie wypelnilo pustki, co
-robisz ?
-    `,
+      Chcesz spytac sie Gejba o
+      Half - Life 3, ale ten ucieka
+      do stanow pozrywac bananow,
+        i nie wiesz co ze sobom zrobic.
+      Nagle stwierdzasz ze chcesz byc
+      nekromantom, wienc zostajesz
+      nekromantom 3 poziomu, ale
+      to nie wypelnilo pustki, co
+      robisz ?
+      `,
     choices: [
       { description: "Podlewasz buawatki", destination: "PBUA" },
       { description: "Krzyczysz", destination: "KRZY" },
       { description: "Udajesz makaron", destination: "UMAK" },
       { description: "Prostujesz banany", destination: "PBAN" },
     ]
-  }
-}
-
-/*
-: KRZY
-FUS RO DAH!!!!!!!!!!
-Nagle okazujesz sie
-smoczym dziecienciem
-i zaczynasz bawic sie
-w krzyczenie
-WOOOOOL NACZOS!!!!!!!
-PATELNIA!!!!!!!!
-JOL KAZUL!!!!!!!!!!
-ale nagle zdarles sobie
-gardlo, i juz nie mozesz
-krzyczec, wienc musisz pojsc
-do apteki, po jakis lek
-na gardlo
-goto IDAP
-
-: IDAP
+  },
+  KRZY: {
+    description: `
+  FUS RO DAH!!!!!!!!!!
+  Nagle okazujesz sie
+  smoczym dziecienciem
+  i zaczynasz bawic sie
+  w krzyczenie
+  WOOOOOL NACZOS!!!!!!!
+  PATELNIA!!!!!!!!
+  JOL KAZUL!!!!!!!!!!
+  ale nagle zdarles sobie
+  gardlo, i juz nie mozesz
+  krzyczec, wienc musisz pojsc
+  do apteki, po jakis lek
+  na gardlo
+  `,
+    choices: [
+      { decription: "Do apteki", destination: "IDAP" },
+    ]
+  },
+  IDAP: {
+    description: `
 Wchodzisz do apteki,
   ale majom tam tylko
 srakolin  turbo forte
-echo 1) Kupujesz
-echo 2) Nie kupujesz
-KSTF
-ANK
-
-: KSTF
+  `,
+    choices: [
+      { decription: "Kupujesz", destination: "KSTF" },
+      { decription: "Nie kupujesz", destination: "ANK" },
+    ]
+  },
+  KSTF: {
+    description: `
 Kupiles srakolin turbo forte
 co teraz ?
-
-  Bierzesz doustnie
-Wpychasz sobie pudelko w...pache
-Czytasz instrukcje obslugi
-Bijesz sie pudelkiem w gardlo
-BDSTF
-WPPP
-CIOS
-BSPWG
-
-: WPPP
+  `,
+    choices: [
+      { decription: "Bierzesz doustnie", destination: "BDSTF" },
+      { decription: "Wpychasz sobie pudelko w...pache", destination: "WPPP" },
+      { decription: "Czytasz instrukcje obslugi", destination: "CIOS" },
+      { decription: "Bijesz sie pudelkiem w gardlo", destination: "BSPWG" },
+    ]
+  },
+  WPPP: {
+    description: `
 Wpychasz sobie srakolin ale
 nic sie nie dzieje, az nagle
 objawia ci sie zadkie nicowe
@@ -176,18 +179,25 @@ pepe, i mowi ci ze nic sie nie
 stanie, ciebie to nie obchodzi
 wienc wyciongasz srakolin z
 pachy
-goto KSTFb
-
-
-: BDSTF
+  `,
+    choices: [
+      { decription: "Tutaj gra powinna sie wywalic ale tego nie zrobi po prostu", destination: "[Tu doslownie nic nie ma, nie bylo napisane w tym 2015]" },
+    ]
+  },
+  BDSTF: {
+    description: `
 Bierzesz doustnie srakolin
   , ale teraz masz srakie i
 biegniesz do klopa
 Szukasz klopa juz 4 dni, az
 nagle widzisz polanke
-goto END
-
-: PBUA
+  `,
+    choices: [
+      { decription: "Idziesz na polanke", destination: "END" },
+    ]
+  },
+  PBUA: {
+    description: `
 Podlewasz buawatki, ale nie umiesz
 podlewac buawatkow, wienc podlewasz
 zlotom rybke, na co ta odpowiada:
@@ -197,9 +207,13 @@ uczucia, i stwierdzasz ze nie
 powiniennes tego robic, wienc
 wracasz do pytania sie Gejba
 o Half - Life'a
-goto POHL
-
-: PH
+  `,
+    choices: [
+      { decription: "Wracasz do Gejba", destination: "POHL" },
+    ]
+  },
+  PH: {
+    description: `
 Pijesz spokojnie herbatke
 ale jakis galgan puszcza
 jakoms popeline na 900 dBM,
@@ -207,25 +221,45 @@ jakoms popeline na 900 dBM,
 w promieniu 200km, w tym
 ciebie, wienc musisz zmodowac
 sobie uszy
-goto HUBZ
-
-: PWZI
+    `,
+    choices: [
+      { decription: "Modujesz uszy", destination: "HUBZ" },
+    ]
+  },
+  PWZI: {
+    description: `
 Probojesz wygrac z Izakiem,
   i wygrales, w ten sposub
 oszukales system i masz
 dostemp do DEVMODE'A
-goto devc
-
-: WZC
+  `,
+    choices: [
+      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+    ]
+  },
+  WZC: {
+    description: `
 Probojesz walczyc z Cepidami
 ale spotykasz rycerzy ktorzy
 mowiom ni, i kazom ci kupic
 niedrogi zywoplot, albo...NI!
 Ty naturalnie decydujesz sie
 kupic zywoplot
-goto KZ
-
-: KZ
+  `,
+    choices: [
+      { decription: "Dokonujesz kupna zywoplotu", destination: "KZ" },
+    ]
+  },
+  KZ: {
+    description: `
+  `,
+    choices: [
+      { decription: "", destination: "" },
+      { decription: "", destination: "" },
+    ]
+  },
+  KZ: {
+    description: `
 Idziesz kupic niedrogi
 zywoplot do tajemniczego
 maga, ktory nie wie
@@ -234,48 +268,67 @@ europejskie, a jakom
 afrykanskie, ale
 kieruje cie do miejscowego
 sprzedawcy zywoplotow.
-goto SZ
-
-: SZ
+  `,
+    choices: [
+      { decription: "...", destination: "SZ" },
+    ]
+  },
+  SZ: {
+    description: `
 Sprzedawca zywoplotow
 nie chce ci na poczontku
 sprzedac zywoplotu,
   co robisz ?
-
-    Wyzywasz go
-Scinasz drzewa sledziem
-Kupujesz zywoplot
-Straszysz go
-WSZ
-SDS
-KZY
-SSZ
-
-: WSZ
+  `,
+    choices: [
+      { decription: "Wyzywasz go", destination: "WSZ" },
+      { decription: "Scinasz drzewa sledziem", destination: "SDS" },
+      { decription: "Kupujesz zywoplot", destination: "KZY" },
+      { decription: "Straszysz go", destination: "SSZ" },
+    ]
+  },
+  WSZ: {
+    description: `
   - TY MARTWA PAPUGO! - wyzywasz skurzybyka - TY WENGORZU!
 Ale to nawet nie rusza sprzedawcy, ktory stwierdza
 ze jestes uzytkownikiem Windowsa Visty
-goto SZ
-
-: SDS
+  `,
+    choices: [
+      { decription: "...", destination: "SZ" },
+    ]
+  },
+  SDS: {
+    description: `
 Stwierdzasz ze nie umiesz
 scinac drzew sledziem
-goto SZ
-
-: KZY
+  `,
+    choices: [
+      { decription: "...", destination: "SZ" },
+    ]
+  },
+  KZY: {
+    description: `
 Kupujesz niedrogo zywoplot
   , wracasz do rycerzy ktorzy
  mowiom ni
-goto RKMN
-
-: SSZ
+  `,
+    choices: [
+      { decription: "...", destination: "RKMN" },
+    ]
+  },
+  SSZ: {
+    description: `
 Probojesz go zastraszyc,
   opowiadajonc mu opowiesci
 o duchach, ale on jest
 za odwazny
-goto SZ
-
-: RKMN
+  `,
+    choices: [
+      { decription: "...", destination: "SZ" },
+    ]
+  },
+  RKMN: {
+    description: `
 Wracasz do rycerzy
 ktorzy mowiom ni,
   a ci idom gdzies,
@@ -285,9 +338,13 @@ potykasz sie o
 kwantowom cegle
 ktora cofa cie
 w czasie
-goto HUBZ
-
-: ABKM
+  `,
+    choices: [
+      { decription: "...", destination: "HUBZ" },
+    ]
+  },
+  ABKM: {
+    description: `
 Probojesz kupic czolg w jedynym,
   znanym ci sklepie - Biedronce, ale
 przypadkiem zostales zaatakowany przez
@@ -296,22 +353,34 @@ z nich, twierdzi ze masz skarpetki
 w maselniczce.
 Co robisz ?
 
-  Uciekasz do Czech
-W ramach protestu tanczysz dubstep
-Opowiadasz dowcip
-Wracasz do domu
-UDCZ
-PTDU
-OCDO
-PRKE
-
-: PTDU
+  `,
+    choices: [
+      { description: "Uciekasz do Czech", destination: "UDCZ" },
+      { description: "W ramach protestu tanczysz dubstep", destination: "PTDU" },
+      { description: "Opowiadasz dowcip", destination: "OCDO" },
+      { description: "Wracasz do domu", destination: "PRKE" },
+    ]
+  },
+  PTDU: {
+    description: `
 Probojesz tanczyc dubstep, ale
 nie umiesz tanczy, wienc nie tanczysz i
 wracasz do rzucalni kokosami
-goto PRKE
-
-: OCDO
+  `,
+    choices: [
+      { decription: "...", destination: "PRKE" },
+    ]
+  },
+  TAG: {
+    description: `
+  `,
+    choices: [
+      { decription: "", destination: "" },
+      { decription: "", destination: "" },
+    ]
+  },
+  OCDO: {
+    description: `
   - Jasiu poszedl do sklepu
 i wrocil do domku.
 nastempnego dnia poszedl
@@ -321,10 +390,13 @@ Bezmuzdzy kupownicy sie
 nie zasmiali ani troche
 tylko poszli do Grecji
 z zazenowania.
-goto PRKE
-
-
-: UDCZ
+  `,
+    choices: [
+      { decription: "...", destination: "PRKE" },
+    ]
+  },
+  UDCZ: {
+    description: `
 Uciekasz do Czech, ale jestes
 tak slaby z geografii, ze przypadkiem
 uciekasz do Albanii.
@@ -332,33 +404,64 @@ Tam spotykasz Popka, a ten
 proponuje ci troche kredek
 za korzystnom cene.
   - Najlepsze bambino za 3 zlote! - mowi.
+  `,
+    choices: [
+      { description: "Kupujesz", destination: "AK" },
+      { description: "Nie kupujesz", destination: "ANK" }
+    ]
+  },
 
-  Kupujesz
-Nie kupujesz
-AK
-ANK
 
-: ANK
+  ANK: {
+    description: `
 Brawo! Wlasnie oszukales system
 wienc masz tu dostemp do DEVMOD'A!
-goto devc
-
-: AK
+  `,
+    choices: [
+      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+    ]
+  },
+  UDCZ: {
+    description: `
+Uciekasz do Czech, ale jestes
+tak slaby z geografii, ze przypadkiem
+uciekasz do Albanii.
+Tam spotykasz Popka, a ten
+proponuje ci troche kredek
+za korzystnom cene.
+  - Najlepsze bambino za 3 zlote! - mowi.
+  `,
+    choices: [
+      { description: "Kupujesz", destination: "AK" },
+      { description: "Nie kupujesz", destination: "ANK" }
+    ]
+  },
+  ANK: {
+    description: `
+Brawo! Wlasnie oszukales system
+wienc masz tu dostemp do DEVMOD'A!
+  `,
+    choices: [
+      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+    ]
+  },
+  AK: {
+    description: `
 A wienc kupujesz! Teraz
 masz paczke najlepszych
 bambino! Mozesz zrobic z nimi
 to co ci sie podoba...
 
-Rysujesz
-Bijesz nimi Popka
-Slodzisz nimi herbate
-Grasz o nie z Popkiem w karty
-AKBR
-AKBBP
-AKBSH
-AKBWK
-
-: AKBR
+  `,
+    choices: [
+      { description: "Rysujesz", destination: "AKBR" },
+      { description: "Bijesz nimi Popka", destination: "AKBBP" },
+      { description: "Slodzisz nimi herbate", destination: "AKBSH" },
+      { description: "Grasz o nie z Popkiem w karty", destination: "AKBWK" },
+    ]
+  },
+  AKBR: {
+    description: `
 Nagle przypominasz sobie ze
 nie umiesz rysowac, wienc
 idziesz odszukac mistycznom
@@ -368,24 +471,36 @@ Po kilku miesioncach przypominasz
 sobie ze nie umiesz szukac mistycznych
 kredek, wienc wracasz do prywatnej
 rzucalni kokosami
-goto PRKE
-
-: AKBBP
+  `,
+    choices: [
+      { description: "...", destination: "PRKE" },
+    ]
+  },
+  AKBBP: {
+    description: `
 Bijesz kretkami Popka, ale
 ten wyjmuje maczete i tnie
 ci wlosy, teraz masz tak slabom
 fryzure, ze ze wstydu idziesz do
   lazienki
-goto LM
-
-: AKBSH
+  `,
+    choices: [
+      { description: "...", destination: "LM" },
+    ]
+  },
+  AKBSH: {
+    description: `
 Probojesz slodzic swoimi kredkami
 herbate, ale nagle przypominasz sobie ze
 nie masz herbaty, wywolany w ten sposob
 paradoks czasoprzestrzenny cofa cie w czasie
-goto UDCZ
-
-: AKBWK
+  `,
+    choices: [
+      { description: "...", destination: "UDCZ" },
+    ]
+  },
+  AKBWK: {
+    description: `
 Grasz o nie z Popkiem w karty
 ale nie macie kart, wienc
 Popek myje sobie godzine liczy
@@ -395,22 +510,25 @@ I Popek zmienia sie w Gargamela,
   - Jak ja nie cierpie smerfuf! - mowi i idzie
 na nie polowac.
 Ty zazenowany idziesz za nim
-got GRPNS
-
-: GRPNS
+  `,
+    choices: [
+      { description: "...", destination: "GRPNS" },
+    ]
+  },
+  GRPNS: {
+    description: `
 Gargamel juz szykuje pulapke na smerfy,
   a ty co robisz ?
-
-    Czekasz az Gargamel zrobi pulapke
-Szukasz wioski smerfuf
-Budujesz klatke z ktorej smerfy nie majo szans wyjsc
-Dissujesz Saurona z Mordoru
-CNG
-SWS
-BKNS
-DS
-
-: DS
+  `,
+    choices: [
+      { description: "Czekasz az Gargamel zrobi pulapke", destination: "CNG" },
+      { description: "Szukasz wioski smerfuf", destination: "SWS" },
+      { description: "Budujesz klatke z ktorej smerfy nie majo szans wyjsc", destination: "BKNS" },
+      { description: "Dissujesz Saurona z Mordoru", destination: "DS" },
+    ]
+  },
+  DS: {
+    description: `
 Probojesz dissowac Saurona, ale
 ten przybywa i bije cie w plecy
 ...
@@ -421,9 +539,13 @@ odpowiedziec i dostaje
 laga muzgu.
 Ty korzystajonc z sytuacji wracasz do
   Gargamela.
-goto GRPNS
-
-: CNG
+  `,
+    choices: [
+      { description: "...", destination: "GRPNS" },
+    ]
+  },
+  CNG: {
+    description: `
 Gargamel juz zastawil pulapke,
   i wlasnie testuje jej dzialanie
 ale Klakier postanawia zostac
@@ -434,9 +556,13 @@ tyle co kaczka.
 Ty oczywiscie cofasz sie
 w czasie, zeby Klakier nie
 odkryl ze jestes magiem.
-goto GRPNS
-
-: SWS
+  `,
+    choices: [
+      { description: "...", destination: "GRPNS" },
+    ]
+  },
+  SWS: {
+    description: `
 Szukasz wioski smerfuf,
   ale spotykasz urzednika,
     ktory pyta Cie o pozwolenie
@@ -444,23 +570,36 @@ na szukanie wiosek smerfuf.
 Ty niestety nie masz na to
 papierow, wienc szybko
 uciekasz do Gargamela.
-goto GRPNS
-
-: BKNS
+  `,
+    choices: [
+      { description: "...", destination: "GRPNS" },
+    ]
+  },
+  BKNS: {
+    description: `
 Budujesz klatke na smerfy
 ale nagle zza krzakuf wyskakuje
 banda lokci, i bezlitosnie
 zgina sie nad efektem twej
 pracy, ty uciekasz...
-goto END
-
-: END
+  `,
+    choices: [
+      { description: "...", destination: "END" },
+    ]
+  },
+  END: {
+    description: `
 Wybiegasz na polane a tam
 widzisz stojoncego
 Zupoluda, ten odwraca sie
 do ciebie, i nic sobie nie
 muwicie.
-....KONIEC....
-*/
+
+KONIEC
+  `,
+    choices: [
+    ]
+  },
+}
 
 export default scenes

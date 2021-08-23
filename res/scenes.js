@@ -144,7 +144,7 @@ const scenes = {
   na gardlo
   `,
     choices: [
-      { decription: "Do apteki", destination: "IDAP" },
+      { description: "Do apteki", destination: "IDAP" },
     ]
   },
   IDAP: {
@@ -154,8 +154,8 @@ Wchodzisz do apteki,
 srakolin  turbo forte
   `,
     choices: [
-      { decription: "Kupujesz", destination: "KSTF" },
-      { decription: "Nie kupujesz", destination: "ANK" },
+      { description: "Kupujesz", destination: "KSTF" },
+      { description: "Nie kupujesz", destination: "ANK" },
     ]
   },
   KSTF: {
@@ -164,10 +164,10 @@ Kupiles srakolin turbo forte
 co teraz ?
   `,
     choices: [
-      { decription: "Bierzesz doustnie", destination: "BDSTF" },
-      { decription: "Wpychasz sobie pudelko w...pache", destination: "WPPP" },
-      { decription: "Czytasz instrukcje obslugi", destination: "CIOS" },
-      { decription: "Bijesz sie pudelkiem w gardlo", destination: "BSPWG" },
+      { description: "Bierzesz doustnie", destination: "BDSTF" },
+      { description: "Wpychasz sobie pudelko w...pache", destination: "WPPP" },
+      { description: "Czytasz instrukcje obslugi", destination: "CIOS" },
+      { description: "Bijesz sie pudelkiem w gardlo", destination: "BSPWG" },
     ]
   },
   WPPP: {
@@ -181,7 +181,7 @@ wienc wyciongasz srakolin z
 pachy
   `,
     choices: [
-      { decription: "Tutaj gra powinna sie wywalic ale tego nie zrobi po prostu", destination: "[Tu doslownie nic nie ma, nie bylo napisane w tym 2015]" },
+      { description: "Tutaj gra powinna sie wywalic ale tego nie zrobi po prostu", destination: "[Tu doslownie nic nie ma, nie bylo napisane w tym 2015]" },
     ]
   },
   BDSTF: {
@@ -193,7 +193,7 @@ Szukasz klopa juz 4 dni, az
 nagle widzisz polanke
   `,
     choices: [
-      { decription: "Idziesz na polanke", destination: "END" },
+      { description: "Idziesz na polanke", destination: "END" },
     ]
   },
   PBUA: {
@@ -209,7 +209,7 @@ wracasz do pytania sie Gejba
 o Half - Life'a
   `,
     choices: [
-      { decription: "Wracasz do Gejba", destination: "POHL" },
+      { description: "Wracasz do Gejba", destination: "POHL" },
     ]
   },
   PH: {
@@ -223,7 +223,7 @@ ciebie, wienc musisz zmodowac
 sobie uszy
     `,
     choices: [
-      { decription: "Modujesz uszy", destination: "HUBZ" },
+      { description: "Modujesz uszy", destination: "HUBZ" },
     ]
   },
   PWZI: {
@@ -234,7 +234,7 @@ oszukales system i masz
 dostemp do DEVMODE'A
   `,
     choices: [
-      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+      { description: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
     ]
   },
   WZC: {
@@ -247,15 +247,7 @@ Ty naturalnie decydujesz sie
 kupic zywoplot
   `,
     choices: [
-      { decription: "Dokonujesz kupna zywoplotu", destination: "KZ" },
-    ]
-  },
-  KZ: {
-    description: `
-  `,
-    choices: [
-      { decription: "", destination: "" },
-      { decription: "", destination: "" },
+      { dsecription: "Dokonujesz kupna zywoplotu", destination: "KZ" },
     ]
   },
   KZ: {
@@ -270,7 +262,7 @@ kieruje cie do miejscowego
 sprzedawcy zywoplotow.
   `,
     choices: [
-      { decription: "...", destination: "SZ" },
+      { dsecription: "...", destination: "SZ" },
     ]
   },
   SZ: {
@@ -281,10 +273,10 @@ sprzedac zywoplotu,
   co robisz ?
   `,
     choices: [
-      { decription: "Wyzywasz go", destination: "WSZ" },
-      { decription: "Scinasz drzewa sledziem", destination: "SDS" },
-      { decription: "Kupujesz zywoplot", destination: "KZY" },
-      { decription: "Straszysz go", destination: "SSZ" },
+      { description: "Wyzywasz go", destination: "WSZ" },
+      { description: "Scinasz drzewa sledziem", destination: "SDS" },
+      { description: "Kupujesz zywoplot", destination: "KZY" },
+      { description: "Straszysz go", destination: "SSZ" },
     ]
   },
   WSZ: {
@@ -294,7 +286,7 @@ Ale to nawet nie rusza sprzedawcy, ktory stwierdza
 ze jestes uzytkownikiem Windowsa Visty
   `,
     choices: [
-      { decription: "...", destination: "SZ" },
+      { description: "...", destination: "SZ" },
     ]
   },
   SDS: {
@@ -303,7 +295,7 @@ Stwierdzasz ze nie umiesz
 scinac drzew sledziem
   `,
     choices: [
-      { decription: "...", destination: "SZ" },
+      { description: "...", destination: "SZ" },
     ]
   },
   KZY: {
@@ -313,7 +305,7 @@ Kupujesz niedrogo zywoplot
  mowiom ni
   `,
     choices: [
-      { decription: "...", destination: "RKMN" },
+      { description: "...", destination: "RKMN" },
     ]
   },
   SSZ: {
@@ -324,7 +316,7 @@ o duchach, ale on jest
 za odwazny
   `,
     choices: [
-      { decription: "...", destination: "SZ" },
+      { description: "...", destination: "SZ" },
     ]
   },
   RKMN: {
@@ -340,7 +332,7 @@ ktora cofa cie
 w czasie
   `,
     choices: [
-      { decription: "...", destination: "HUBZ" },
+      { description: "...", destination: "HUBZ" },
     ]
   },
   ABKM: {
@@ -368,15 +360,15 @@ nie umiesz tanczy, wienc nie tanczysz i
 wracasz do rzucalni kokosami
   `,
     choices: [
-      { decription: "...", destination: "PRKE" },
+      { description: "...", destination: "PRKE" },
     ]
   },
   TAG: {
     description: `
   `,
     choices: [
-      { decription: "", destination: "" },
-      { decription: "", destination: "" },
+      { description: "", destination: "" },
+      { description: "", destination: "" },
     ]
   },
   OCDO: {
@@ -392,7 +384,7 @@ tylko poszli do Grecji
 z zazenowania.
   `,
     choices: [
-      { decription: "...", destination: "PRKE" },
+      { description: "...", destination: "PRKE" },
     ]
   },
   UDCZ: {
@@ -418,7 +410,7 @@ Brawo! Wlasnie oszukales system
 wienc masz tu dostemp do DEVMOD'A!
   `,
     choices: [
-      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+      { description: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
     ]
   },
   UDCZ: {
@@ -442,7 +434,7 @@ Brawo! Wlasnie oszukales system
 wienc masz tu dostemp do DEVMOD'A!
   `,
     choices: [
-      { decription: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
+      { description: "DEVMODE", destination: `[orignalny tag dla 'devmoda' to 'devc', ale jeszcze nie wiem jak to ma dzialac tutaj` },
     ]
   },
   AK: {

@@ -1,6 +1,6 @@
-export default scenes = {
+const scenes = {
   PRKE: {
-    description: 
+    description:
       `
       Jestes w swojej prywatniej
       rzucacni kokosami, co robisz?
@@ -55,3 +55,5 @@ Co robisz?
     ]
   }
 }
+
+export default scenes

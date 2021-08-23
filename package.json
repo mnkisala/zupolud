@@ -1,7 +1,6 @@
 {
   "name": "zupolud",
   "version": "1.0.0",
-  "main": "src/index.js",
   "license": "MIT",
   "devDependencies": {
     "parcel": "^2.0.0-rc.0"
@@ -12,6 +11,6 @@
   },
   "scripts": {
     "dev": "parcel serve src/index.html",
-    "build": "parcel serve src/index.html"
+    "build": "parcel build src/index.html"
   }
 }

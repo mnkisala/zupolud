@@ -247,7 +247,7 @@ Ty naturalnie decydujesz sie
 kupic zywoplot
   `,
     choices: [
-      { dsecription: "Dokonujesz kupna zywoplotu", destination: "KZ" },
+      { description: "Dokonujesz kupna zywoplotu", destination: "KZ" },
     ]
   },
   KZ: {
@@ -262,7 +262,7 @@ kieruje cie do miejscowego
 sprzedawcy zywoplotow.
   `,
     choices: [
-      { dsecription: "...", destination: "SZ" },
+      { description: "...", destination: "SZ" },
     ]
   },
   SZ: {

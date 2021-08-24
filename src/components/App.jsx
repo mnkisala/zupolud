@@ -16,6 +16,8 @@ const App = () => {
     }
   }
 
+  const [jumpTo, setJumpTo] = useState("")
+
   return (
     <div>
       <h1
@@ -33,6 +35,18 @@ const App = () => {
       <br />
       <hr />
       <br />
+
+      <p>
+        <h3> "Narzedzia deweloperskie"</h3>
+        <h5>Scena: {sceneId} </h5>
+        <input type="text" name="goto" id="goto" value={jumpTo} onChange={(e) => {
+          setJumpTo(e.target.value)
+        }} />
+        <button onClick={() => {
+          goto(jumpTo)
+          setJumpTo("")
+        }}> Skocz </button>
+      </p>
     </div >
   )
 }
